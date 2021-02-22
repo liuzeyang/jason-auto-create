@@ -14,7 +14,7 @@
   },
   "author": "jasonlzy",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "chalk": "^4.1.0"
   }
 }
