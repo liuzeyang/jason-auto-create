@@ -1,0 +1,20 @@
+{
+  "name": "jason-auto-create",
+  "version": "0.0.2",
+  "description": "auto create",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "jason": "bin/autocreate.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jasonlzy",
+  "license": "MIT",
+  "devDependencies": {
+    "chalk": "^4.1.0"
+  }
+}
