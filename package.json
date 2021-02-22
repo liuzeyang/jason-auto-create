@@ -1,5 +1,5 @@
 {
-  "name": "jason-auto-create",
+  "name": "@jason-create/auto-create",
   "version": "0.0.2",
   "description": "auto create",
   "main": "index.js",
