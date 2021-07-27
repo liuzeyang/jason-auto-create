@@ -1,16 +1,16 @@
-#!/usr/bin/env node 
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path')
 const chalk = require('chalk');
 const template = require('./template');
 
-const resolve = (...file) => path.resolve(__dirname, ...file);
+const resolve = (...file) => path.resolve(process.cwd(), ...file);
 const log = message => console.log(chalk.green(message));
 const successLog = message => console.log(chalk.blue(message));
 const errorLog = message => console.log(chalk.red(message));
 
 const dirCreate = (targetPath, cb) => {
-    if(fs.existsSync(targetPath)){
+    if (fs.existsSync(targetPath)) {
         cb()
     } else {
         dirCreate(path.dirname(targetPath), () => {
@@ -47,12 +47,11 @@ process.stdin.on('data', async (data) => {
     const stdinPath = data.toString().trim();
     const ClassName = stdinPath.split('/').pop();
     const dirPath = resolve(stdinPath);
-
     const exist = fs.existsSync(dirPath);
-    if(exist) {
+    if (exist) {
         errorLog(`${dirPath}已经存在该目录文件，请重新输入`);
         return
-    }else{
+    } else {
         log(`正在生成${dirPath}目录中。。。`)
         await generateDirectoryCreate(dirPath);
     }

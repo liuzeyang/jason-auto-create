@@ -1,6 +1,6 @@
 {
   "name": "@jason-create/auto-create",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "auto create",
   "main": "index.js",
   "publishConfig": {
